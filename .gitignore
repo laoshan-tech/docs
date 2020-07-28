@@ -1,0 +1,8 @@
+# NPM
+node_modules/
+
+# VuePress
+docs/.vuepress/dist/
+
+# IDE
+.idea/

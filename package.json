@@ -1,0 +1,30 @@
+{
+  "name": "laoshan-tech-docs",
+  "version": "1.0.0",
+  "description": "Documents of LaoShan Tech",
+  "main": "index.js",
+  "dependencies": {
+    "vuepress": "^1.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "lint-md-cli": "^0.1.2",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "lint": "lint-md .",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "view-info": "vuepress view-info docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laoshan-tech/docs.git"
+  },
+  "author": "laoshan-tech",
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/laoshan-tech/docs/issues"
+  },
+  "homepage": "https://github.com/laoshan-tech/docs#readme"
+}
