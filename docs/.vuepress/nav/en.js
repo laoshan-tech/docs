@@ -1,7 +1,7 @@
 module.exports = [
   {
-    text: "Development",
-    link: "/dev/",
+    text: "Introduction",
+    link: "/en/intro/",
   },
   {
     text: "Learn More",
@@ -12,11 +12,11 @@ module.exports = [
         items: [
           {
             text: "License",
-            link: "/misc/license/",
+            link: "/en/misc/license/",
           },
           {
-            text: "Release Notes",
-            link: "/misc/release-notes/",
+            text: "Disclaimer",
+            link: "/en/misc/release-notes/",
           },
         ],
       },

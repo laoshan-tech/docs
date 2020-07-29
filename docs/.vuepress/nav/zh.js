@@ -1,7 +1,17 @@
 module.exports = [
   {
-    text: "测试环境",
-    link: "/dev/",
+    text: "介绍",
+    link: "/intro/",
+  },
+  {
+    text: "开放资源",
+    ariaLabel: "开放资源",
+    items: [
+      {
+        text: "免费节点",
+        link: "/open/free-nodes/"
+      }
+    ]
   },
   {
     text: "了解更多",
@@ -15,8 +25,8 @@ module.exports = [
             link: "/misc/license/",
           },
           {
-            text: "Release Notes",
-            link: "/misc/release-notes/",
+            text: "免责声明",
+            link: "/misc/disclaimer/",
           },
         ],
       },
