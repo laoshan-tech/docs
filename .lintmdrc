@@ -1,0 +1,7 @@
+{
+  "excludeFiles": [],
+  "rules": {
+    "no-empty-code-lang": 1,
+    "no-long-code": 1
+  }
+}
