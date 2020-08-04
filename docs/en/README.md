@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /en/intro/
 features:
 - title: Elegant
   details: Follow good operation and maintenance habits and avoid destructive operations on the system.

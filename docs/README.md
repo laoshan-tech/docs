@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /intro/
 features:
 - title: 优雅
   details: 遵从良好的运维习惯，规避对系统的破坏性操作。
