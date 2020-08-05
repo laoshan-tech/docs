@@ -57,6 +57,5 @@ module.exports = (ctx) => ({
         delay: 1000,
       },
     ],
-    ["@vuepress/back-to-top"],
   ],
 });
