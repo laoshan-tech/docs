@@ -1,4 +1,4 @@
-module.exports = (ctx) => ({
+module.exports = {
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   locales: {
     "/": {
@@ -49,13 +49,9 @@ module.exports = (ctx) => ({
       },
     ],
     ["vuepress-plugin-mathjax", { target: "svg", macros: { "*": "\\times" } }],
-    "vuepress-plugin-nprogress",
-    [
-      "vuepress-plugin-medium-zoom",
-      {
-        selector: ".my-wrapper .my-img",
-        delay: 1000,
-      },
-    ],
+    "@vuepress/nprogress",
+    "@vuepress/medium-zoom",
+    "@vuepress/back-to-top",
+    ["@vuepress/google-analytics", { ga: "UA-150419494-2" }],
   ],
-});
+};

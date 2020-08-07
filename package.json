@@ -7,14 +7,15 @@
     "vuepress": "^1.5.2"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.3",
+    "@vuepress/plugin-google-analytics": "^1.5.3",
+    "@vuepress/plugin-medium-zoom": "^1.5.3",
+    "@vuepress/plugin-nprogress": "^1.5.3",
     "eslint": "^7.5.0",
     "lint-md-cli": "^0.1.2",
     "prettier": "^2.0.5",
     "vuepress-plugin-clean-urls": "^1.1.1",
-    "vuepress-plugin-mathjax": "^1.2.8",
-    "vuepress-plugin-medium-zoom": "^1.1.8",
-    "vuepress-plugin-nprogress": "^1.1.7",
-    "vuepress-plugin-smooth-scroll": "0.0.9"
+    "vuepress-plugin-mathjax": "^1.2.8"
   },
   "scripts": {
     "lint": "lint-md .",
