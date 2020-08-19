@@ -18,6 +18,10 @@ module.exports = [
             text: "Disclaimer",
             link: "/en/misc/release-notes/",
           },
+          {
+            text: "Contact Us",
+            link: "/en/misc/contact/",
+          },
         ],
       },
     ],

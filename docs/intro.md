@@ -27,3 +27,56 @@ sidebar: auto
 但是，互有优缺点的服务端代理和 Linux 使用门槛挡住了大部分想自行解决「翻墙」问题的同学，只能求助于各类 VPN 软件或机场，直接催生了中文互联网社区中一个非常特殊的圈子——机场圈。围绕着机场圈子，有做电商系统（即各类机场面板，如 SSPanel、VNetPanel 等）的开发者，有做第四方支付和洗钱的「金融」巨鳄，有孜孜不倦推广机场的 AFFMan，还有围绕着机场圈子周围提供各类服务器代购、薅羊毛的中间商等等，令人眼花缭乱，目不暇接。
 
 [崂山科技](/) 希望能将自己多年来在国际网络互联方面积累沉淀的经验、技术、解决方案整理成文，系统地提供给各位爱好互联网技术的同学，同时也会借助自己的技术经验，投入精力研发更领先、更安全、更高效的技术方案，共同改善目前的国际网络环境。
+
+## 可以提供什么服务
+
+### 开放资源
+
+#### [公益 Telegram 代理](/open/free-nodes/#telegram-代理)
+
+Telegram 是目前较合适的沟通工具，客户端易用、功能丰富、安全可靠，但已经被 GFW 封锁，在此提供公益 Telegram 代理，帮助大家随时上线。
+
+#### [公益 Shadowsocks 代理](/open/free-nodes/#shadowsocks-节点)
+
+使用赞助商提供的仇怨，搭建公益 Shadowsocks 节点。
+
+#### [公益 V2Ray 节点](/open/free-nodes/#v2ray-节点)
+
+使用云厂商提供的免费资源，搭建稳定的公益 V2Ray 节点。
+
+### 解决方案
+
+#### 服务端
+
+- 面板搭建及运维
+- 服务器基本运维及性能优化
+- 隧道技术
+- IPLC、IEPL 专线技术
+
+#### 客户端
+
+- Windows 各类客户端使用
+- macOS 各类客户端使用
+- Android 各类客户端使用
+- iOS 各类客户端使用
+
+## 支持我们
+
+### 鸣谢
+
+- [SSPanel-Uim](https://github.com/Anankke/SSPanel-Uim)
+
+### 赞助
+
+#### BTC
+
+`1Ad5uiEYi8pHhXjjfZ4nizK9oToswQ8gXQ`
+
+#### USTD
+
+- ERC20 `0xeed39bc6331f7619c3c13c4613e4cf6962d99bb8`
+- TRC20 `TJwduBpEMHUYoidrmo3kbyfpUK9RjJ4sxN`
+
+## 联系我们
+
+参见 [联系我们](/misc/contact/)。

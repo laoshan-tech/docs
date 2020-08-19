@@ -28,6 +28,10 @@ module.exports = [
             text: "免责声明",
             link: "/misc/disclaimer/",
           },
+          {
+            text: "联系我们",
+            link: "/misc/contact/",
+          },
         ],
       },
     ],
