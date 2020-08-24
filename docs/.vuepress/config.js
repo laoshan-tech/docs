@@ -25,7 +25,9 @@ module.exports = {
         editLinkText: "在 GitHub 上编辑此页",
         lastUpdated: "上次更新",
         nav: require("./nav/zh"),
-        sidebar: {},
+        sidebar: {
+          "/server/": getServerSidebar("服务端"),
+        },
       },
       "/en/": {
         label: "English",
@@ -34,7 +36,9 @@ module.exports = {
         editLinkText: "Edit this page on GitHub",
         lastUpdated: "Last Updated",
         nav: require("./nav/en"),
-        sidebar: {},
+        sidebar: {
+          "/en/server/": getServerSidebar("Server"),
+        },
       },
     },
   },
@@ -55,3 +59,13 @@ module.exports = {
     ["@vuepress/google-analytics", { ga: "UA-150419494-2" }],
   ],
 };
+
+function getServerSidebar(groupA) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: ["", "panel", "tunnel", "node"],
+    },
+  ];
+}

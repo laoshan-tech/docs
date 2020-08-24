@@ -14,6 +14,10 @@ module.exports = [
     ]
   },
   {
+    text: "服务端",
+    link: "/server/",
+  },
+  {
     text: "了解更多",
     ariaLabel: "了解更多",
     items: [
