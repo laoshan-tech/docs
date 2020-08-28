@@ -4,6 +4,21 @@ sidebar: auto
 
 # 免费节点
 
+## 公用节点
+
+收集各类公益站点的免费资源，整合提供的节点列表，支持 Clash、Surge 订阅。更多信息，请参考 [proxytool](https://proxy.tgbot.co/)。
+
+### Clash
+
+- [Clash 配置文件](https://proxy.tgbot.co/clash/config)
+- [Clash 一键导入](clash://install-config?url=https://proxy.tgbot.co/clash/config)
+- [Clash Provider](https://proxy.tgbot.co/clash/proxies) 用于 Shadowrocket 等添加订阅
+
+### Surge
+
+- [Surge 配置文件](https://proxy.tgbot.co/surge/config)
+- [Surge 一键导入](surge3:///install-config?url=https://proxy.tgbot.co/surge/config)
+
 ## Telegram 代理
 
 ### 苏州联通入口
