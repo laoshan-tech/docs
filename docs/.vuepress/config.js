@@ -26,7 +26,7 @@ module.exports = {
         lastUpdated: "上次更新",
         nav: require("./nav/zh"),
         sidebar: {
-          "/server/": getServerSidebar("服务端"),
+          "/server/": getServerSidebar("服务端", "Web 面板", "中转与隧道", "节点"),
         },
       },
       "/en/": {
@@ -37,7 +37,7 @@ module.exports = {
         lastUpdated: "Last Updated",
         nav: require("./nav/en"),
         sidebar: {
-          "/en/server/": getServerSidebar("Server"),
+          "/en/server/": getServerSidebar("Server", "Web Panel", "Redirect and Tunnel", "Node"),
         },
       },
     },
@@ -60,12 +60,27 @@ module.exports = {
   ],
 };
 
-function getServerSidebar(groupA) {
+function getServerSidebar(groupA, groupB, groupC, groupD) {
   return [
     {
       title: groupA,
       collapsable: false,
-      children: ["", "panel", "tunnel", "node"],
+      children: ["", "linux"],
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: ["panel"],
+    },
+    {
+      title: groupC,
+      collapsable: false,
+      children: ["redir", "tunnel"],
+    },
+    {
+      title: groupD,
+      collapsable: false,
+      children: ["node"],
     },
   ];
 }
