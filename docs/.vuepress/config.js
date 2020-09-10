@@ -70,7 +70,7 @@ function getServerSidebar(groupA, groupB, groupC, groupD) {
     {
       title: groupB,
       collapsable: false,
-      children: ["panel"],
+      children: ["panel/sspanel", "panel/v2board", "panel/django-sspanel"],
     },
     {
       title: groupC,
