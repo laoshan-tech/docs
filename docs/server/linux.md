@@ -1,6 +1,3 @@
----
-lang: zh-CN
----
 # Linux 基础
 
 无论 Web 面板还是节点，默认都是跑在 Linux 服务器上。因此，基础的 Linux 运维技术必不可少。
@@ -75,3 +72,5 @@ apt install php7.3-fpm php7.3-mysql php7.3-curl php7.3-gd php7.3-mbstring php7.3
 # 开机自启
 sudo systemctl enable php7.3-fpm
 ```
+
+### 安装 MySQL
