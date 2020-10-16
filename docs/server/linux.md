@@ -73,4 +73,144 @@ apt install php7.3-fpm php7.3-mysql php7.3-curl php7.3-gd php7.3-mbstring php7.3
 sudo systemctl enable php7.3-fpm
 ```
 
-### 安装 MySQL
+### 安装 MariaDB 数据库
+
+> MariaDB 是 MySQL 关系数据库管理系统的一个复刻，由社区开发，有商业支持，旨在继续保持在 GNU GPL 下开源。
+
+MariaDB 与 MySQL 完全兼容，不需要担心功能差异的问题。
+
+选取官方源的镜像进行安装 MariaDB 10.5 稳定版本。
+
+#### 添加清华大学镜像源
+
+```shell script
+sudo apt-get install software-properties-common dirmngr apt-transport-https
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirrors.tuna.tsinghua.edu.cn/mariadb/repo/10.5/ubuntu bionic main'
+```
+
+#### 安装 MariaDB Server
+
+```shell script
+sudo apt update
+sudo apt install mariadb-server
+```
+
+#### 进行安全设置
+
+```shell script
+sudo mysql_secure_installation
+```
+
+1.  需要输入当前的数据库 root 密码
+   
+    一般来说初次安装都是空，直接按 Enter。
+
+1.  询问是否需要切换到 Unix Socket 认证
+
+    一般来说还是使用密码认证比较通用，选 N。
+
+1.  询问是否需要设置 root 密码
+
+    可按需要填写密码。
+
+1.  询问是否需要移除匿名账户
+
+    选 Y。
+
+1.  询问是否需要禁止 root 用户远程登录
+
+    如果需要 root 从其他机器登录，则选 N，如果只会从本机登录 root，那么选 Y。
+
+1.  询问是否需要删除 test 数据库
+
+    选 Y，test 数据库不需要，只供测试时候用。
+    
+1.  询问是否刷新权限表
+
+    选 Y，立刻刷新权限表使得前面的修改生效。
+
+#### 安装验证
+
+```shell script
+$ mysql -V
+mysql  Ver 15.1 Distrib 10.5.6-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+```
+
+::: tip 提示
+至此 LNMP 安装完成。
+:::
+
+### 安装 Docker
+
+如果有使用 Docker 的需求，可以直接用 Docker 官方提供的脚本安装。
+
+```shell script
+sh -c "$(curl -fsSL get.docker.com)"
+```
+
+#### 安装 `docker-compose`
+
+```shell script
+apt install python3-pip
+pip3 install -U pip
+pip3 install docker-compose
+```
+
+## 配置优化
+
+### 安全设置
+
+#### SSH
+
+SSH 的配置文件位于 `/etc/ssh/sshd_config`，推荐切换默认端口、关闭密码登录、使用密钥认证。
+
+```
+# 端口设置，建议 10000 以上
+Port 20002
+
+# 开启密钥认证
+PubkeyAuthentication yes
+
+# 不允许空密码
+PermitEmptyPasswords no
+
+# 关闭密码认证
+PasswordAuthentication no
+```
+
+给自己的用户创建一对密钥，具体的步骤可以参考 [详细步骤：创建和管理 Azure 中的 Linux VM 用于身份验证的 SSH 密钥](https://docs.microsoft.com/zh-cn/azure/virtual-machines/linux/create-ssh-keys-detailed)，这里只简单说明一下。
+
+```shell script
+cd ~
+
+# 如果 .ssh 目录不存在，就创建一个
+mkdir .ssh
+
+# 生成一对密钥
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+把公钥的内容复制到 `~/.ssh/authorized_keys` 文件下，没有就创建一个，私钥的内容保存到自己的电脑上，配在自己使用的客户端（如 XShell、Putty 等）中。
+
+重启 SSH 服务。
+
+```shell script
+service ssh restart
+```
+
+**新开一个窗口，测试一下 SSH 密钥登录是否正常，免得配置错误以后 SSH 登不上去。**
+
+### 网络优化
+
+推荐使用优化脚本操作，手动方式不做赘述。
+
+```shell script
+wget -N --no-check-certificate "https://github.000060000.xyz/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+```
+
+**BBR、BBRPlus、锐速等 TCP 优化方案的效果因人而异，请自行测试。**
+
+::: danger 危险
+内核变更要谨慎，操作失误可能导致机器启动不了。
+:::
