@@ -93,3 +93,47 @@ ln -s /etc/nginx/sites-available/sspanel.conf sspanel
 ```shell script
 nginx -s reload
 ```
+
+#### 导入数据库
+
+```shell script
+mysql -u root -p
+mysql>CREATE DATABASE sspanel;
+mysql>use sspanel;
+mysql>source /var/www/sspanel/sql/glzjin_all.sql;
+mysql>exit
+```
+
+#### 修改配置文件
+
+```shell script
+cd /var/www/sspanel/
+cp config/.config.example.php config/.config.php
+cp config/appprofile.example.php config/appprofile.php
+vim config/.config.php
+```
+
+::: tip 提示
+注意数据库的配置，修改完成后网站应该可以正常访问。
+:::
+
+#### 创建管理员并同步用户
+
+```shell script
+php xcat User createAdmin
+php xcat User resetTraffic
+php xcat Tool initQQWry
+php xcat Tool initdownload
+```
+
+#### 创建定时任务
+
+```crontab
+30 22 * * * php /var/www/sspanel/xcat SendDiaryMail
+0 0 * * * php -n /var/www/sspanel/xcat Job DailyJob
+*/1 * * * * php /var/www/sspanel/xcat Job CheckJob
+```
+
+::: tip 提示
+SSPanel 安装完成。
+:::
