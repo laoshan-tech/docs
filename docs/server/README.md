@@ -8,10 +8,10 @@ Web 面板指各类「机场」电商系统，提供用户注册、充值、套�
 
 常见的面板有
 
-- SSPanel
-- VNetPanel
-- V2Board
-- django-sspanel
+- [SSPanel](https://github.com/Anankke/SSPanel-Uim)
+- VNetPanel（已经闭源）
+- [V2Board](https://github.com/v2board/v2board)
+- [django-sspanel](https://github.com/Ehco1996/django-sspanel)
 - 等等
 
 ## 流量转发
@@ -42,3 +42,13 @@ Web 面板指各类「机场」电商系统，提供用户注册、充值、套�
 - 等等
 
 ## 代理节点
+
+提供最终的代理功能，不同的代理节点支持不同的协议。
+
+常见的代理节点程序有
+
+- Shadowsocks
+- ShadowsocksR
+- V2Ray
+- Trojan
+- 等等

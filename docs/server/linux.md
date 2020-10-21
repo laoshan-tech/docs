@@ -66,7 +66,7 @@ configure arguments: --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-fcTQc
 add-apt-repository ppa:ondrej/php
 apt update
 
-# 安装PHP
+# 安装PHP 7.3，如果需要其他版本，自行替换
 apt install php7.3-fpm php7.3-mysql php7.3-curl php7.3-gd php7.3-mbstring php7.3-xml php7.3-xmlrpc php7.3-opcache php7.3-zip php7.3 php7.3-json php7.3-bz2 php7.3-bcmath
 
 # 开机自启
