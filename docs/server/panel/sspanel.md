@@ -96,12 +96,46 @@ nginx -s reload
 
 #### 导入数据库
 
+安全考虑，尽量不使用数据库的 root 账户，而选择新建一个独立的账户连接数据库。
+
 ```shell script
-mysql -u root -p
-mysql>CREATE DATABASE sspanel;
-mysql>use sspanel;
-mysql>source /var/www/sspanel/sql/glzjin_all.sql;
-mysql>exit
+$ mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 30
+Server version: 10.5.6-MariaDB-1:10.5.6+maria~bionic mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Reading history-file /root/.mysql_history
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE sspanel;
+--------------
+create database sspanel
+--------------
+
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [(none)]> USE sspanel;
+Database changed
+MariaDB [sspanel]> CREATE USER 'sspanel'@'localhost' IDENTIFIED BY 'your_password';
+--------------
+CREATE USER 'sspanel'@'localhost' IDENTIFIED BY 'your_password'
+--------------
+
+Query OK, 0 rows affected (0.007 sec)
+
+MariaDB [sspanel]> GRANT ALL ON sspanel.* TO 'sspanel'@'localhost';
+--------------
+GRANT ALL ON sspanel.* TO 'sspanel'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [sspanel]> SOURCE /var/www/sspanel/sql/glzjin_all.sql;
+...省略...
+MariaDB [sspanel]> exit;
+Bye
 ```
 
 #### 修改配置文件
@@ -114,26 +148,56 @@ vim config/.config.php
 ```
 
 ::: tip 提示
-注意数据库的配置，修改完成后网站应该可以正常访问。
+注意数据库的配置，应使用上一步新建的账户，修改完成后网站应该可以正常访问。
 :::
 
 #### 创建管理员并同步用户
 
 ```shell script
+# 创建管理员
 php xcat User createAdmin
+
+# 重置所有流量
 php xcat User resetTraffic
+
+# 下载 IP 地址库
 php xcat Tool initQQWry
+
+# 下载客户端安装包
 php xcat Tool initdownload
 ```
 
 #### 创建定时任务
 
+使用 `crontab -e` 进入 crontab 编辑界面，添加如下定时任务。
+
 ```crontab
+# 发送日报邮件，不需要发送可以不添加
 30 22 * * * php /var/www/sspanel/xcat SendDiaryMail
+
+# 每日定时任务和每分钟定时任务，必须添加
 0 0 * * * php -n /var/www/sspanel/xcat Job DailyJob
 */1 * * * * php /var/www/sspanel/xcat Job CheckJob
+
+# 财务报表，不需要可以不添加
+5 0 * * * php /var/www/sspanel/xcat FinanceMail day 
+6 0 * * 0 php /var/www/sspanel/xcat FinanceMail week
+7 0 1 * * php /var/www/sspanel/xcat FinanceMail month
+
+# 检测被墙
+*/1 * * * * php /var/www/sspanel/xcat DetectGFW
 ```
 
 ::: tip 提示
 SSPanel 安装完成。
 :::
+
+## 进阶使用
+
+### Telegram 机器人
+
+待完善。
+
+### 节点配置
+
+待完善。

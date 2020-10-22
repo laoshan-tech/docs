@@ -57,6 +57,20 @@ module.exports = {
     "@vuepress/medium-zoom",
     "@vuepress/back-to-top",
     ["@vuepress/google-analytics", { ga: "UA-150419494-2" }],
+    [
+      "vuepress-plugin-comment",
+      {
+        choosen: "gitalk",
+        options: {
+          clientID: "ff2ea05c137c9dca0bdb",
+          clientSecret: "62b5ae5782e31f0bb63435b301a179592effbafb",
+          repo: "comments-on-docs",
+          owner: "laoshan-tech",
+          admin: ["laoshan-taoist"],
+          distractionFreeMode: false,
+        },
+      },
+    ],
   ],
 };
 

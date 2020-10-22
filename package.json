@@ -4,7 +4,8 @@
   "description": "Documents of LaoShan Tech",
   "main": "index.js",
   "dependencies": {
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-comment": "^0.7.3"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.5.3",
