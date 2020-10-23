@@ -1,5 +1,15 @@
 module.exports = {
-  head: [["link", { rel: "icon", href: "/logo.png" }]],
+  head: [
+    ["link", { rel: "icon", href: "/logo.png" }],
+    [
+      "meta",
+      {
+        name: "keywords",
+        contents:
+          "vuepress,docs,文档,翻墙,科学上网,网络,运营商,互联网,Shadowsocks,ShadowsocksR,v2ray,trojan,Clash,Surge,免费节点,机场,sspanel,v2board,wireguard,gost,中转,隧道,节点,后端,iptables,bbr,锐速",
+      },
+    ],
+  ],
   locales: {
     "/": {
       lang: "zh-CN",
@@ -57,20 +67,6 @@ module.exports = {
     "@vuepress/medium-zoom",
     "@vuepress/back-to-top",
     ["@vuepress/google-analytics", { ga: "UA-150419494-2" }],
-    [
-      "vuepress-plugin-comment",
-      {
-        choosen: "gitalk",
-        options: {
-          clientID: "ff2ea05c137c9dca0bdb",
-          clientSecret: "62b5ae5782e31f0bb63435b301a179592effbafb",
-          repo: "comments-on-docs",
-          owner: "laoshan-tech",
-          admin: ["laoshan-taoist"],
-          distractionFreeMode: false,
-        },
-      },
-    ],
   ],
 };
 
