@@ -67,6 +67,15 @@ module.exports = {
     "@vuepress/medium-zoom",
     "@vuepress/back-to-top",
     ["@vuepress/google-analytics", { ga: "UA-150419494-2" }],
+    ["sitemap", { hostname: "https://docs.laoshan-tech.com" }],
+    [
+      "@vuepress/last-updated",
+      {
+        transformer: (timestamp) => {
+          return new Date(timestamp).toISOString();
+        },
+      },
+    ],
   ],
 };
 
