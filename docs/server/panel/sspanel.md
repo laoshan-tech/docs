@@ -1,4 +1,4 @@
-# SSPanel 面板
+# SSPanel
 
 [SSPanel](https://github.com/Anankke/SSPanel-Uim) 是目前使用最为广泛的机场 Web 面板之一，根据其开发历史，分为多个不同时期的版本，目前开发最为活跃且生态最好的是 [SSPanel-Uim](https://github.com/Anankke/SSPanel-Uim)，以下 SSPanel 均代指该版本。
 
@@ -14,9 +14,9 @@
 
 ### 环境依赖
 
-1. MySQL
-1. PHP 7.2+
-1. Composer
+- MySQL
+- PHP 7.2+
+- Composer
 
 基础环境安装参见 [Linux 基础](../linux.md)。
 
