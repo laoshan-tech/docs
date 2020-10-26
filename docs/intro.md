@@ -48,15 +48,15 @@ Telegram 是目前较合适的沟通工具，客户端易用、功能丰富、�
 
 #### [服务端](./server/)
 
--   面板搭建及运维
+- 面板搭建及运维
 
-    -   [SSPanel](./server/panel/sspanel.md)
-    -   [V2Board](./server/panel/v2board.md)
-    -   [django-sspanel](./server/panel/django-sspanel.md)
+  - [SSPanel](./server/panel/sspanel.md)
+  - [V2Board](./server/panel/v2board.md)
+  - [django-sspanel](./server/panel/django-sspanel.md)
 
--   [服务器基本运维及性能优化](./server/linux.md)
--   隧道技术
--   IPLC、IEPL 专线技术
+- [服务器基本运维及性能优化](./server/linux.md)
+- 隧道技术
+- IPLC、IEPL 专线技术
 
 #### 客户端
 
