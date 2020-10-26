@@ -48,7 +48,7 @@ chown -R www-data:www-data ${PWD}
 
 #### Nginx 配置
 
-需要使用的伪静态配置：
+需要使用的伪静态配置如下。
 
 ```nginx
 location / {
@@ -66,7 +66,7 @@ location / {
 server {  
     listen 80;
     listen [::]:80;
-    root /var/www/sspanel/public; # 改成你自己的路径
+    root /var/www/sspanel/public; # 改成你自己的路径，需要以 /public 结尾
     index index.php index.html;
     server_name sspanel.host; # 改成你自己的域名
 
@@ -80,6 +80,10 @@ server {
     }
 }
 ```
+
+::: tip 提示
+`root` 路径需要配置成以 `/public` 结尾，是因为 `/public` 目录下才是真正的 Web 静态文件，面板根目录下存放的是 PHP 业务逻辑部分，所以在 Nginx 中要配置为以 `/public` 结尾。
+:::
 
 再在 `/etc/nginx/sites-enabled` 下配置软连接。
 
