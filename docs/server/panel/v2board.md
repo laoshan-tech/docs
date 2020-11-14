@@ -9,7 +9,6 @@
 - 稳定、简单、快速
 - 单一版本
 
-
 ## 安装
 
 ### 环境依赖
@@ -110,6 +109,59 @@ nginx -s reload
 */1 * * * * php /var/www/v2board/artisan schedule:run
 ```
 
+#### 队列服务
+
+首先安装 Node.js 14.x。
+
+```shell script
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+检查 Node.js 版本。
+
+```shell script
+$ node -v
+v14.15.0
+```
+
+安装 Node.js 后也会同时安装 NPM，这是 Node.js 的依赖管理器，检查 NPM 的版本。
+
+```shell script
+$ npm -v
+6.14.8
+```
+
+Node.js 与 NPM 安装完成后，即可开始安装 PM2。
+
+```shell script
+# 全局安装最新版的 PM2
+sudo npm install pm2@latest -g
+```
+
+
 ## 进阶使用
 
-待完善。
+### 后端节点
+
+#### 由 V2Board 官方团队维护的后端
+
+仅支持 V2Board。
+
+- Shadowsocks
+
+  - [项目群组](https://t.me/tidal_lab)
+
+- V2ray
+
+  - [项目群组](https://t.me/tidal_lab)
+  - [项目地址](https://github.com/tokumeikoi/aurora)
+
+- Trojan
+
+  - [项目群组](https://t.me/tidal_lab)
+  - [项目地址](https://github.com/tokumeikoi/tidalab-trojan)
+
+#### 第三方提供的后端
+
+参考 [节点](../node.md)。
