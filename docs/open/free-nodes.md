@@ -17,7 +17,15 @@ sidebar: auto
 
 ## Shadowsocks 节点
 
-由 SSRSUB 提供
+由 SSRSUB 提供。
+
+国内访问加速地址
+
+```
+https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/ss-sub
+```
+
+原始订阅地址
 
 ```
 https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub
@@ -25,13 +33,31 @@ https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub
 
 ## ShadowsocksR 节点
 
+由 SSRSUB 提供。
+
+国内访问加速地址
+
+```
+https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/ssrsub
+```
+
+原始订阅地址
+
 ```
 https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub
 ```
 
 ## V2ray 节点
 
-由 SSRSUB 提供
+由 SSRSUB 提供。
+
+国内访问加速地址
+
+```
+https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/v2ray
+```
+
+原始订阅地址
 
 ```
 https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
@@ -43,7 +69,15 @@ https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
 
 ## Clash 订阅
 
-由 SSRSUB 提供
+由 SSRSUB 提供。
+
+国内访问加速地址
+
+```
+https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/Clash.yml
+```
+
+原始订阅地址
 
 ```
 https://raw.githubusercontent.com/ssrsub/ssr/master/Clash.yml
@@ -51,7 +85,15 @@ https://raw.githubusercontent.com/ssrsub/ssr/master/Clash.yml
 
 ## Surge 订阅
 
-由 SSRSUB 提供
+由 SSRSUB 提供。
+
+国内访问加速地址
+
+```
+https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/Surge.conf
+```
+
+原始订阅地址
 
 ```
 https://raw.githubusercontent.com/ssrsub/ssr/master/Surge.conf
