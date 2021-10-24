@@ -54,13 +54,13 @@ https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub
 国内访问加速地址
 
 ```
-https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/v2ray
+https://cdn.jsdelivr.net/gh/ssrsub/ssr@master/V2Ray
 ```
 
 原始订阅地址
 
 ```
-https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+https://raw.githubusercontent.com/ssrsub/ssr/master/V2Ray
 ```
 
 ## Trojan 节点
